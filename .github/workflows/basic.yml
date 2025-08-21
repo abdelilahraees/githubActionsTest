@@ -1,0 +1,11 @@
+name: basic.yml
+on:
+  push
+jobs:
+  firstJob:
+    runs-on: ubuntu latest
+    steps:
+     - name: print
+       run: echo "helloWorld"
+
+
