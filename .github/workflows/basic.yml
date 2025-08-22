@@ -7,5 +7,16 @@ jobs:
     steps:
      - name: print
        run: echo "helloWorld"
-
+  jobTwo:
+    runs-on: ubuntu-latest
+    needs: firstJob
+    steps:
+      - name: jobTwoPrint
+        run: echo "Benkida"
+  jobthree:
+    runs-on: ubuntu-latest
+    needs: [firstJob,jobTwo]
+    steps:
+      - name: Number3
+        run: echo "Number3"
 
