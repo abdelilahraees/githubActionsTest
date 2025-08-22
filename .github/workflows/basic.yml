@@ -3,19 +3,19 @@ on:
  push
 jobs:
   firstJob:
-    runs-on: ubuntu latest
+    runs-on: ubuntu-latest
     steps:
      - name: print
        run: echo "helloWorld"
   jobTwo:
     runs-on: ubuntu-latest
-#    needs: firstJob
+    needs: firstJob
     steps:
       - name: jobTwoPrint
         run: echo "Benkida"
   jobthree:
     runs-on: ubuntu-latest
-#    needs: [firstJob,jobTwo]
+    needs: [firstJob,jobTwo]
     steps:
       - name: Number3
         run: echo "Number3"
